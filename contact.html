@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch -   Roses Garage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Roses Garage</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-header">
+            <h2>Ready to Talk Cars?</h2>
+            <p>Connect with our team to inquire about inventory, book a service appointment, or just talk shop.</p>
+        </section>
+        
+        <section class="contact-methods">
+            <h3>Our Showroom & Service Bay</h3>
+            <div class="contact-info">
+                <h4>Address</h4>
+                <p>123 Performance Parkway, Auto City, GHANA 12345</p>
+                <a href="maps.html">View Map & Get Directions</a>
+            </div>
+            
+            <div class="contact-info">
+                <h4>Phone</h4>
+                <p>Sales Inquiries: (233) 540 66 2550)</p>
+                <p>Service Booking: (233) 540 66 2550</p>
+            </div>
+
+            <div class="contact-info">
+                <h4>Email</h4>
+                <p>Sales: <a href="drboateng01@gmail.com">sales@gearheadgarage.com</a></p>
+                <p>Service: <a href="drboateng01@gmail.com"> drboateng01@gmail.com<a href="drboateng01@gmail.com"</a></p>
+</a></p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <h3>Send Us a Message</h3>
+            <form action="/submit-form" method="POST" class="contact-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="user_name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="user_email" required>
+                
+                <label for="subject">Subject of Inquiry:</label>
+                <select id="subject" name="inquiry_subject">
+                    <option value="inventory">Inventory Question</option>
+                    <option value="service">Service Appointment</option>
+                    <option value="general">General Question</option>
+                </select>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="user_message" rows="3" required></textarea>
+
+                <button type="submit" class="cta-button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ROSES Garage | Driven by Passion</p>
+    </footer>
+</body>
+</html>

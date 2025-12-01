@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Inventory -[BLVCKROSE AUTOMOBILE]</title>
+    <style>
+        /* Basic CSS for the inventory page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        /* Filter/Search Bar Styling */
+        .filter-section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .filter-section select, .filter-section input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Inventory Grid Styling */
+        .inventory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .car-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .car-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .car-info {
+            padding: 15px;
+        }
+
+        .car-info h3 {
+            margin-top: 0;
+            color: red;
+        }
+
+        .car-info p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        .car-price {
+            font-size: 1.5em;
+            color: #28a745;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .car-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .car-button:hover {
+            background-color:red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Current Inventory</h1>
+        <nav>
+            <a href="index.html" style="color: white; margin: 0 10px;">Home</a>
+            <a href="contact.html" style="color: white; margin: 0 10px;">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section class="filter-section">
+            <h2>Filter Vehicles</h2>
+            <form action="#" method="GET">
+                <input type="text" name="keyword" placeholder="Search by Make or Model">
+                
+                <select name="make">
+                    <option value="">All Makes</option>
+                    <option value="toyota">AUDI</option>
+                    <option value="ford">BUGGATI</option>
+                    <option value="bmw">FERRARI</option>
+                    </select>
+
+                <select name="type">
+                    <option value="">All Types</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="truck">Truck</option>
+                    </select>
+
+                <button type="submit" class="car-button" style="width: auto; display: inline-block;">Apply Filters</button>
+            </form>
+        </section>
+        
+        <section class="inventory-grid">
+
+            <div class="car-card" data-make="toyota" data-model="camry">
+                <img src="audi.jpg" alt="Audi r8">
+                <div class="car-info">
+                    <h3>AUDI R8</h3>
+                    <p><strong>Mileage:</strong> 200,000 miles</p>
+                    <p><strong>Engine:</strong> 404-Cylinder</p>
+                    <p><strong>Color:</strong> Red & Black</p>
+                    <div class="car-price">$250,990</div>
+                    <a href="car-details-1.html" class="car-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="car-card" data-make="ford" data-model="f150">
+                <img src="cheron.jpg" alt="CHIRON">
+                <div class="car-info">
+                    <h3>2020 BUGGATI CHIRON</h3>
+                    <p><strong>Mileage:</strong> 45,000 miles</p>
+                    <p><strong>Engine:</strong> 3.5L V6 EcoBoost</p>
+                    <p><strong>Color:</strong>Unkwown</p>
+                    <div class="car-price">$3,800,500</div>
+                    <a href="car-details-2.html" class="car-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="car-card" data-make="bmw" data-model="x3">
+                <img src="ferrer.jpg" alt="2023 BMW X3 xDrive30i">
+                <div class="car-info">
+                    <h3>1961 Ferrari 250 GT Spider Scaglietti</h3>
+                    <p><strong>Mileage:</strong> 18,000 miles</p>
+                    <p><strong>Engine:</strong> 2.0L Turbo I4</p>
+                    <p><strong>Color:</strong> Brooklyn vale</p>
+                    <div class="car-price">$47,999,200</div>
+                    <a href="car-details-3.html" class="car-button">View Details</a>
+                </div>
+            </div>
+
+            </section>
+
+    </div>
+
+    <footer>
+        <p style="text-align: center; padding: 10px; background-color:red; color: white; margin-top: 20px;">
+            &copy; 2025 [BLVCKROSE AUTOMOBILE]. All Rights Reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
